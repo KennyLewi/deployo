@@ -9,7 +9,7 @@ const Dashboard = () => {
 
   async function getName() {
     try {
-      const res = await fetch("http://localhost:5000/dashboard", {
+      const res = await fetch("https://deployo-1-server.onrender.com/dashboard", {
         method: "POST",
         headers: { token: localStorage.token },
       });
@@ -22,7 +22,7 @@ const Dashboard = () => {
 
   async function verify() {
     try {
-      const res = await fetch("http://localhost:5000/auth/verify", {
+      const res = await fetch("https://deployo-1-server.onrender.com/auth/verify", {
         method: "GET",
         headers: { token: localStorage.token },
       });

@@ -18,7 +18,7 @@ export default function ContextWrapper(props) {
 
     async function getAllEvents() {
         try {
-            const res = await fetch("http://localhost:5000/calendar", {
+            const res = await fetch("https://deployo-1-server.onrender.com/calendar", {
               method: "POST",
               headers: { token: localStorage.token },
             });

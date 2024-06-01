@@ -30,7 +30,7 @@ export default function EventModel() {
     if (selectedEvent) {
       try {
         const event_id = Number(selectedEvent.id);
-        const res = await fetch("http://localhost:5000/calendar/events/" + event_id, {
+        const res = await fetch("https://deployo-1-server.onrender.com/calendar/events/" + event_id, {
           method: "PUT",
           headers: {
             token: localStorage.token,
@@ -46,7 +46,7 @@ export default function EventModel() {
       }
     } else {
       try {
-        const res = await fetch("http://localhost:5000/calendar/events", {
+        const res = await fetch("https://deployo-1-server.onrender.com/calendar/events", {
           method: "POST",
           headers: {
             token: localStorage.token,
@@ -66,7 +66,7 @@ export default function EventModel() {
   async function handleDelete() {
     try {
       const event_id = Number(selectedEvent.id);
-      const res = await fetch("http://localhost:5000/calendar/events/" + event_id, {
+      const res = await fetch("https://deployo-1-server.onrender.com/calendar/events/" + event_id, {
         method: "DELETE",
         headers: { token: localStorage.token },
       });
